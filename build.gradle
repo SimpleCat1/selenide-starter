@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+wrapper.gradleVersion = '6.9'
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:5.20.3",
+            "org.junit.jupiter:junit-jupiter-api:5.7.1")
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.7.1"
+}
+
+compileTestJava{
+    options.encoding = 'UTF-8'
+}
+
+
+test {
+    systemProperty "file.encoding", "utf-8"
+    useJUnitPlatform()
+}
