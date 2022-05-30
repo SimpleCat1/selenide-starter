@@ -18,6 +18,9 @@ public class DragAndDropPageTests {
     /* private String bBlcokAfterDragAndDrop = "#column-b header:contains('A')"; Почему-то не работает,
     хотя в консоли браузера работает...
     */
+    //1
+    //2
+    //3
     private String bBlcokAfterDragAndDropText = "A";
 
     @BeforeEach
